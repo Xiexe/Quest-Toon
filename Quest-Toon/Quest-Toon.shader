@@ -64,7 +64,7 @@
 
                 fixed3 indirectLight = ShadeSH9(fixed4(0,0,0,1));
 
-                fixed ndl = DotClamped(i.worldNormal, _WorldSpaceLightPos0);
+                fixed ndl = DotClamped(i.worldNormal, lightDir);
                 fixed vdn = (abs(dot(i.viewDir, i.worldNormal)));
                 fixed shadow = ceil(ndl);
 
